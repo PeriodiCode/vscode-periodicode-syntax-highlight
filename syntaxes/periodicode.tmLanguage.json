@@ -40,12 +40,10 @@
 			]
 		},
 		"operator": {
-			"comment": "working all right",
-			"name": "keyword.control.less.periodicode",
+			"name": "keyword.operator.periodicode",
 			"match": "\\+|-|\\*|/"
 		},
 		"string": {
-			"comment": "working all right",
 			"name": "string.quoted.double.periodicode",
 			"begin": "\"",
 			"end": "\"",
@@ -57,7 +55,6 @@
 			]
 		},
 		"reservedAtIdentifier": {
-			"comment": "working all right",
 			"patterns": [
 				{
 					"name": "constant.language.periodicode",
@@ -66,7 +63,6 @@
 			]
 		},
 		"atIdentifier": {
-			"comment": "working all right",
 			"patterns": [
 				{
 					"name": "entity.name.tag.periodicode",
