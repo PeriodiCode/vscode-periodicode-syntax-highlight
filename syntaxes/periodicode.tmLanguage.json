@@ -105,20 +105,20 @@
 				}
 			]
 		},
+		"dollarIdentifier": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.periodicode",
+					"match": "\\$_"
+				}
+			]
+		},
 		"comments": {
 			"patterns": [
 				{
 					"name": "comment.line.number-sign.periodicode",
 					"begin": "#",
 					"end": "\\n|$"
-				}
-			]
-		},
-		"dollarIdentifier": {
-			"patterns": [
-				{
-					"name": "entity.name.tag.periodicode",
-					"match": "\\$[0-9a-zA-Z_]+"
 				}
 			]
 		}
