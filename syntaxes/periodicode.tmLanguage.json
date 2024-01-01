@@ -8,24 +8,19 @@
 	],
 	"repository": {
 		"expression": {
-			"comment": "valid PeriodiCode expressions with comments",
+			"comment": "valid PeriodiCode expressions",
 			"patterns": [
 				{
 					"include": "#comments"
 				},
 				{
-					"include": "#expression-bare"
-				}
-			]
-		},
-		"expression-bare": {
-			"comment": "valid PeriodiCode expressions without comments",
-			"patterns": [
-				{
 					"include": "#operator"
 				},
 				{
 					"include": "#punctuation"
+				},
+				{
+					"include": "#dollarIdent"
 				},
 				{
 					"include": "#space"
@@ -41,9 +36,6 @@
 				},
 				{
 					"include": "#number"
-				},
-				{
-					"include": "#dollarIdentifier"
 				}
 			]
 		},
@@ -97,19 +89,19 @@
 				}
 			]
 		},
+		"dollarIdent": {
+			"patterns": [
+				{
+					"name": "variable.language.periodicode",
+					"match": "\\$_"
+				}
+			]
+		},
 		"number": {
 			"patterns": [
 				{
 					"name": "constant.numeric.periodicode",
 					"match": "(0v|0x|0z|0d|0o|0s|0qn|0qt|0t|0b)?([0-9a-oA-O]*)(\\.([0-9a-oA-O]*)((r[0-9a-oA-O]*)?))?(((e|xp|p)(\\+|-)?[0-9a-oA-O]+)?)"
-				}
-			]
-		},
-		"dollarIdentifier": {
-			"patterns": [
-				{
-					"name": "entity.name.tag.periodicode",
-					"match": "\\$_"
 				}
 			]
 		},
