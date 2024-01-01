@@ -28,10 +28,13 @@
 					"include": "#string"
 				},
 				{
-					"include": "#literal"
+					"include": "#reservedAtIdentifier"
 				},
 				{
 					"include": "#atIdentifier"
+				},
+				{
+					"include": "#number"
 				},
 				{
 					"include": "#dollarIdentifier"
@@ -58,15 +61,12 @@
 				}
 			]
 		},
-		"literal": {
+		"reservedAtIdentifier": {
 			"comment": "working all right",
 			"patterns": [
 				{
 					"name": "constant.language.periodicode",
 					"match": "@\\s*(binary|trinary|ternary|quaternary|quinary|senary|octal|decimal|duodecimal|dozenal|hexadecimal|vigesimal)\\b"
-				},
-				{
-					"include": "#number"
 				}
 			]
 		},
