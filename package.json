@@ -1,5 +1,9 @@
 {
   "name": "periodicode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeriodiCode/vscode-periodicode-syntax-highlight"
+  },
   "displayName": "PeriodiCode",
   "description": "Syntax highlighting for PeriodiCode",
   "version": "0.0.1",
@@ -10,16 +14,25 @@
     "Programming Languages"
   ],
   "contributes": {
-    "languages": [{
-      "id": "periodicode",
-      "aliases": ["PeriodiCode", "periodicode"],
-      "extensions": [".periodicode"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "periodicode",
-      "scopeName": "source.periodicode",
-      "path": "./syntaxes/periodicode.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "periodicode",
+        "aliases": [
+          "PeriodiCode",
+          "periodicode"
+        ],
+        "extensions": [
+          ".periodicode"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "periodicode",
+        "scopeName": "source.periodicode",
+        "path": "./syntaxes/periodicode.tmLanguage.json"
+      }
+    ]
   }
 }
