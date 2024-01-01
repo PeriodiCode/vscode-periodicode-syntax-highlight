@@ -1,0 +1,116 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "PeriodiCode",
+	"patterns": [
+		{
+			"include": "#expression"
+		}
+	],
+	"repository": {
+		"expression": {
+			"comment": "valid PeriodiCode expressions with comments",
+			"patterns": [
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#expression-bare"
+				}
+			]
+		},
+		"expression-bare": {
+			"comment": "valid PeriodiCode expressions without comments",
+			"patterns": [
+				{
+					"include": "#operator"
+				},
+				{
+					"include": "#string"
+				},
+				{
+					"include": "#literal"
+				},
+				{
+					"include": "#atIdentifier"
+				},
+				{
+					"include": "#dollarIdentifier"
+				},
+				{
+					"include": "#punctuation"
+				}
+			]
+		},
+		"operator": {
+			"comment": "working all right",
+			"name": "keyword.control.less.periodicode",
+			"match": "\\+|-|\\*|/"
+		},
+		"string": {
+			"comment": "working all right",
+			"name": "string.quoted.double.periodicode",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.periodicode",
+					"match": "\\\\."
+				}
+			]
+		},
+		"literal": {
+			"comment": "working all right",
+			"patterns": [
+				{
+					"name": "constant.language.periodicode",
+					"match": "@\\s*(binary|trinary|ternary|quaternary|quinary|senary|octal|decimal|duodecimal|dozenal|hexadecimal|vigesimal)\\b"
+				},
+				{
+					"include": "#number"
+				}
+			]
+		},
+		"atIdentifier": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.periodicode",
+					"match": "@\\s*(assert_eq)\\b"
+				}
+			]
+		},
+		"punctuation": {
+			"patterns": [
+				{
+					"name": "punctuation.separator.element.periodicode",
+					"match": ","
+				}
+			]
+		},
+		"number": {
+			"patterns": [
+				{
+					"name": "constant.numeric.periodicode",
+					"match": "(0v|0x|0z|0d|0o|0s|0qn|0qt|0t|0b)?([0-9a-oA-O]*)(\\.([0-9a-oA-O]*)((r[0-9a-oA-O]*)?))?(((e|xp|p)(\\+|-)?[0-9a-oA-O]+)?)"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.periodicode",
+					"begin": "#",
+					"end": "\n"
+				}
+			]
+		},
+		"dollarIdentifier": {
+			"patterns": [
+				{
+					"name": "entity.name.tag.periodicode",
+					"match": "\\$[0-9a-zA-Z_]+\\b"
+				}
+			]
+		}
+	},
+	"scopeName": "source.periodicode"
+}

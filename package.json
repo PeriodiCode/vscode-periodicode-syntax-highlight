@@ -1,0 +1,25 @@
+{
+  "name": "periodicode",
+  "displayName": "PeriodiCode",
+  "description": "Syntax highlighting for PeriodiCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "periodicode",
+      "aliases": ["PeriodiCode", "periodicode"],
+      "extensions": [".periodicode"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "periodicode",
+      "scopeName": "source.periodicode",
+      "path": "./syntaxes/periodicode.tmLanguage.json"
+    }]
+  }
+}
