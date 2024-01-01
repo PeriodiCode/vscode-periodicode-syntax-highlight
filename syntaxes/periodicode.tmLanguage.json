@@ -58,7 +58,7 @@
 			"patterns": [
 				{
 					"name": "constant.language.periodicode",
-					"match": "@\\s*(binary|trinary|ternary|quaternary|quinary|senary|octal|decimal|duodecimal|dozenal|hexadecimal|vigesimal)\\b"
+					"match": "@\\s*(binary|trinary|ternary|quaternary|quinary|pental|senary|seximal|heximal|octal|oct|decimal|denary|decanary|dec|duodecimal|dozenal|hexadecimal|hex|vigesimal)\\b"
 				}
 			]
 		},
