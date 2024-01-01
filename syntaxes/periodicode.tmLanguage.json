@@ -70,7 +70,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.tag.periodicode",
-					"match": "@\\s*(assert_eq)\\b"
+					"match": "@\\s*([a-zA-Z0-9_]+)\\b"
 				}
 			]
 		},
@@ -85,7 +85,7 @@
 			"patterns": [
 				{
 					"name": "punctuation.periodicode",
-					"match": ",|;|\\(|\\)|\\[|\\]"
+					"match": ",|;|\\(|\\)|\\[|\\]|\\{|\\}"
 				}
 			]
 		},
@@ -93,7 +93,7 @@
 			"patterns": [
 				{
 					"name": "variable.language.periodicode",
-					"match": "\\$_"
+					"match": "\\$[a-zA-Z0-9_]+"
 				}
 			]
 		},
