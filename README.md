@@ -9,6 +9,10 @@ For example if there is an image subfolder under your extension project workspac
 
 ![](syntax_highlight_example.png)
 
+## Installing the extension
+
+* To start using the extension, clone this repository and copy the folder inside of the `<user home>/.vscode/extensions` folder (`~/.vscode-server/extensions` if on WSL: Ubuntu) and restart VS Code.
+
 <!--
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 -->

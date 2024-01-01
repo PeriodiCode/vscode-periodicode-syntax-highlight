@@ -2,7 +2,7 @@
   "name": "periodicode",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PeriodiCode/vscode-periodicode-syntax-highlight"
+    "url": "https://github.com/PeriodiCode/vscode-periodicode-syntax-highlight.git"
   },
   "displayName": "PeriodiCode",
   "description": "Syntax highlighting for PeriodiCode",
