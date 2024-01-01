@@ -25,6 +25,12 @@
 					"include": "#operator"
 				},
 				{
+					"include": "#punctuation"
+				},
+				{
+					"include": "#space"
+				},
+				{
 					"include": "#string"
 				},
 				{
@@ -38,9 +44,6 @@
 				},
 				{
 					"include": "#dollarIdentifier"
-				},
-				{
-					"include": "#punctuation"
 				}
 			]
 		},
@@ -71,6 +74,7 @@
 			]
 		},
 		"atIdentifier": {
+			"comment": "working all right",
 			"patterns": [
 				{
 					"name": "entity.name.tag.periodicode",
@@ -78,11 +82,18 @@
 				}
 			]
 		},
+		"space": {
+			"patterns": [
+				{
+					"match": "\\s"
+				}
+			]
+		},
 		"punctuation": {
 			"patterns": [
 				{
-					"name": "punctuation.separator.element.periodicode",
-					"match": ","
+					"name": "punctuation.periodicode",
+					"match": ",|;|\\(|\\)|\\[|\\]"
 				}
 			]
 		},
@@ -99,7 +110,7 @@
 				{
 					"name": "comment.line.number-sign.periodicode",
 					"begin": "#",
-					"end": "\n"
+					"end": "\\n|$"
 				}
 			]
 		},
@@ -107,7 +118,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.tag.periodicode",
-					"match": "\\$[0-9a-zA-Z_]+\\b"
+					"match": "\\$[0-9a-zA-Z_]+"
 				}
 			]
 		}
